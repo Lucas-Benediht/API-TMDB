@@ -8,7 +8,7 @@ import json
 load_dotenv()
 app = Flask(__name__)
 
-API_KEY = os.getenv('API_KEY')
+API_KEY = ''587ef6e3e3ac5df239394eeca31ef572''
 idioma = 'pt-BR'
 
 @app.route('/')
