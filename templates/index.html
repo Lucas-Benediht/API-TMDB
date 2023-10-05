@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cineflix</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .movie-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 0;
+            list-style-type: none;
+        }
+        .movie-item {
+            background-color: #000;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s;
+            width: 200px;
+        }
+        .movie-item:hover {
+            transform: scale(1.05);
+        }
+        .movie-title {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #fff;
+            margin: 10px 0;
+        }
+        .movie-overview {
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+        .movie-poster {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        h2 {
+            margin-top: 20px;
+            color: #fff;
+            text-align: center;
+        }
+        .topnav {
+            background-color: #000;
+            overflow: hidden;
+        }
+        .topnav a {
+            float: left;
+            display: block;
+            color: #fff;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        .topnav a:hover {
+            background-color: #e50914; /* Vermelho Netflix */
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="Categorias">Categorias</a> <!-- Corrigi a tag <a> aqui -->
+        <a href="Tendências">Tendências</a>
+    </div>
+    <div class="container">
+        <!-- Seção para Tendências -->
+        <h2>Cineflix</h2>
+        <ul class="movie-list">
+            {% for tendencia in tendencias %}
+                <li class="movie-item">
+                    <img src="https://image.tmdb.org/t/p/w500{{ tendencia.poster_path }}" alt="{{ tendencia.title }} Poster" class="movie-poster">
+                    <h2 class="movie-title">{{ tendencia.title }}</h2>
+
+                </li>
+            {% endfor %}
+        </ul>
+        <hr>
+        <!-- Seção para Filmes de Ação -->
+        <h2>Filmes de Ação</h2>
+        <ul class="movie-list">
+            {% for filme in filmes_acao %}
+                <li class="movie-item">
+                    <img src="https://image.tmdb.org/t/p/w500{{ filme.poster_path }}" alt="{{ filme.title }} Poster" class="movie-poster">
+                    <h2 class="movie-title">{{ filme.title }}</h2>
+
+                </li>
+            {% endfor %}
+        </ul>
+        <!-- Seção para Animações -->
+        <h2>Animações</h2>
+        <ul class="movie-list">
+            {% for filme in filmes_desenhos %}
+                <li class="movie-item">
+                    <img src="https://image.tmdb.org/t/p/w500{{ filme.poster_path }}" alt="{{ filme.title }} Poster" class="movie-poster">
+                    <h2 class="movie-title">{{ filme.title }}</h2>
+
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
