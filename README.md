@@ -3,8 +3,7 @@
 
 Este é um projeto Python que usa o framework Flask para consumir a API do TMDb e exibir informações sobre tendências, filmes de ação e filmes de desenhos animados. Com ele, você pode descobrir os filmes mais populares e explorar uma variedade de gêneros.
 
-![image](https://github.com/Lucas-Benediht/API-TMDB/assets/110697669/8575b794-4712-49b8-bea0-22d88534e3ad)
-
+![image](https://github.com/Lucas-Benediht/API-TMDB/assets/110697669/a387a97b-dbbc-492e-bee2-bdb446cfe28b)
 
 ## Índice
 
@@ -18,10 +17,6 @@ Este é um projeto Python que usa o framework Flask para consumir a API do TMDb 
 - Python 3.x
 - Flask
 - Bibliotecas Python: `requests`, `dotenv`
-
-## Observação
-
-🚧 Esse projeto ainda está em desenvolvimento novas features serão implementadas 🚧
 
 ## Contribuição
 Se você deseja contribuir para este projeto, siga estas etapas:
