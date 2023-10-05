@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }        
+        form {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 5px;
+            width: 300px;
+            animation: fadeIn 2s;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: none;
+            background-color: #333;
+            color: #fff;
+        }
+        
+        input[type="submit"] {
+            background-color: #e50914;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #ff3b33;
+        }
+
+        .topnav {
+            background-color: #000;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            animation: fadeIn 2s; /* Adicionando o efeito fadeIn aqui */
+        }
+
+        .topnav a {
+            float: left;
+            color: #fff;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .topnav a:hover {
+            background-color: #e50914;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="topnav animate__animated animate__fadeIn"> 
+        <a class="active animate__animated animate__bounce" href="{{url_for('site')}}">Inicio</a>
+        <a class="animate__animated animate__bounce" href="{{ url_for('filmes') }}">Filmes</a>
+        <a class="animate__animated animate__bounce" href="{{url_for('series')}}">Séries</a>
+        <a class="animate__animated animate__bounce" href="{{ url_for('login') }}">Login</a>
+    </div>
+    <form class="animate__animated animate__bounceIn" method="POST" action="/login">
+        <label for="username">Nome de Usuário:</label>
+        <input type="text" id="username" name="username" required>
+        <br>
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+        <input type="submit" value="Login">
+    </form>
+</body>
+</html>
+

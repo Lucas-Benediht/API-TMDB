@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Categorias de Filmes</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <style>
+            body {
+                background-color: #000;
+                color: #fff;
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+            }
+            
+            header {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            nav ul {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+            }
+            
+            nav li {
+                margin-bottom: 10px;
+            }
+            
+            nav a {
+                text-decoration: none;
+                color: #fff;
+                font-size: 1.5rem;
+                transition: color 0.5s; 
+                display: block;
+                padding: 10px 20px;
+            }
+            
+            nav a:hover {
+                color: #e50914; 
+            }
+            .topnav {
+                background-color: #000;
+                overflow: hidden;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+            }
+    
+            .topnav a {
+                float: left;
+                color: #fff;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 1rem;
+                animation: flip 2s; 
+            }
+            .topnav a:hover {
+                background-color: #e50914;
+            }
+            .category-item {
+                animation: flip 2s; 
+            }
+        </style>
+    </head>
+    <body>
+        <div class="topnav">
+            <a class="active animate__animated animate__flip" href="{{url_for('site')}}">Inicio</a>
+            <a href="{{ url_for('filmes') }}" class="animate__animated animate__flip">Filmes</a>
+            <a  href="{{url_for('series')}} " class="animate__animated animate__flip">Séries</a>
+            <a href="{{ url_for('login') }}" class="animate__animated animate__flip">Login</a>
+        </div>
+        <header>
+            <h1>Categorias de Séries</h1>
+        </header>
+        <nav>
+            <ul>
+                <li class="category-item"><a href="#">Ação</a></li>
+                <li class="category-item"><a href="#">Comédia</a></li>
+                <li class="category-item"><a href="#">Drama</a></li>
+                <li class="category-item"><a href="#">Aventura</a></li>
+                <li class="category-item"><a href="#">Ficção Científica</a></li>
+            </ul>
+        </nav>
+    </body>
+    </html>
