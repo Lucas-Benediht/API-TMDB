@@ -5,18 +5,9 @@ Este é um projeto Python que usa o framework Flask para consumir a API do TMDb 
 
 ![image](https://github.com/Lucas-Benediht/API-TMDB/assets/110697669/a387a97b-dbbc-492e-bee2-bdb446cfe28b)
 
-## Índice
+## Exemplos 
 
-- [Tecnologias](#tecnologias)
-- [Observação](#observação)
-- [Contribuição](#contribuição)
-- [Licença](#licença)
-- [Contato](#contato)
-
-## Tecnologias
-- Python 3.x
-- Flask
-- Bibliotecas Python: `requests`, `dotenv`
+![Teste (1)](https://github.com/Lucas-Benediht/API-TMDB/assets/110697669/c3682a42-648c-442d-b1ee-79368284d3e0)
 
 ## Contribuição
 Se você deseja contribuir para este projeto, siga estas etapas:
